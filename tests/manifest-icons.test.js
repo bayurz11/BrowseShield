@@ -21,3 +21,10 @@ test("manifest declares the alarms permission required for scheduled filter refr
   assert.ok(manifest.permissions.includes("alarms"));
   assert.ok(manifest.optional_host_permissions.includes("https://*/*"));
 });
+
+test("popup and settings headers use the supplied BrowseShield brand mark", async () => {
+  for (const file of ["src/popup/popup.html", "src/options/options.html"]) {
+    const html = await readFile(resolve(projectRoot, file), "utf8");
+    assert.match(html, /\.\.\/assets\/icons\/icon48\.png/, `${file} should display the custom brand icon`);
+  }
+});

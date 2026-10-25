@@ -4,7 +4,7 @@ Thanks for helping improve BrowseShield. Contributions are welcome through issue
 
 ## Development setup
 
-1. Install Node.js and Python 3.
+1. Install Node.js and Python 3. Install the optional icon tooling with `python -m pip install -r scripts/requirements-icons.txt` if you need to regenerate PNG icons.
 2. Clone the repository and run `npm install`.
 3. Run `npm test` before submitting changes.
 4. For a local extension build, run `npm run package:extension` and load the unpacked project in a Chromium browser with Developer mode enabled.

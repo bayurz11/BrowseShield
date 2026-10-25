@@ -12,8 +12,8 @@
 body { width: 360px; margin: 0; color: var(--ink); background: #f3f8f7; font: 13px/1.45 Inter, ui-sans-serif, system-ui, sans-serif; }
 main { padding: 15px 16px 12px; border-top: 4px solid #0c9a8c; background: var(--paper); }
 header { display: flex; gap: 10px; align-items: center; margin-bottom: 14px; }
-.logo { display: grid; place-items: center; width: 40px; height: 40px; flex: 0 0 auto; border-radius: 13px; color: white; background: linear-gradient(145deg, #10a397, #08736e); box-shadow: 0 4px 10px #087f7827; }
-.logo svg { width: 23px; height: 23px; }
+.logo { display: grid; place-items: center; width: 44px; height: 44px; flex: 0 0 auto; }
+.logo img { display: block; width: 44px; height: 44px; object-fit: contain; }
 .brand { flex: 1; min-width: 0; }
 h1 { margin: 0; font-size: 16px; letter-spacing: -.3px; }
 header p { margin: 2px 0 0; color: var(--muted); font-size: 11px; }

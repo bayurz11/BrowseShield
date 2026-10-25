@@ -2,6 +2,12 @@
 
 BrowseShield is a Chrome Manifest V3 extension starter focused on local, user-controlled browsing protection.
 
+BrowseShield's original source code is released under the MIT License; see [LICENSE](LICENSE). Bundled third-party materials keep their own licenses; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+## Contributing
+
+Issues and pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for setup, testing, and contribution expectations.
+
 ## Current starter features
 
 - A popup with a global protection toggle and current-site allowlist control.

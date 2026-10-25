@@ -8,6 +8,11 @@ playwright-report/
 test-results/
 .vite/
 .next/
+.gradle/
+.kotlin/
+captures/
+externalNativeBuild/
+*.iml
 
 # Local environment and secrets
 .env
@@ -51,3 +56,14 @@ Desktop.ini
 *.xpi
 *.apk
 *.aab
+
+# Keep these source and community files trackable if a broader ignore is added later.
+!LICENSE
+!CONTRIBUTING.md
+!THIRD_PARTY_NOTICES.md
+!distribution/
+!distribution/**
+!tests/
+!tests/**
+!scripts/
+!scripts/**

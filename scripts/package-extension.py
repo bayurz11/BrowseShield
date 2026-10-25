@@ -41,7 +41,7 @@ for relative in filter(None, required_files):
     if not (ROOT / relative).is_file():
         fail(f"manifest references missing file: {relative}")
 
-package_files = [MANIFEST_PATH, *sorted((ROOT / "src").rglob("*"))]
+package_files = [MANIFEST_PATH, ROOT / "LICENSE", ROOT / "THIRD_PARTY_NOTICES.md", *sorted((ROOT / "src").rglob("*"))]
 package_files = [path for path in package_files if path.is_file()]
 if not package_files:
     fail("no extension runtime files found")

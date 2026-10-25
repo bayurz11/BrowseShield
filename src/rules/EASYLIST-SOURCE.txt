@@ -2,6 +2,6 @@ Generated from EasyList community filter list.
 Source: https://easylist.to/easylist/easylist.txt
 Downloaded: 2026-10-25T14:23:59.245Z
 Generated DNR rules: 20000
-Only plain host block/allow rules are included. Path-specific, cosmetic, scriptlet, and modifier rules are omitted.
+Supported URL filters and DNR-compatible options are included. Cosmetic, scriptlet, and unsupported modifier rules are omitted.
 EasyList source licensing: GPL-3.0-or-later AND CC-BY-SA-3.0. See https://github.com/easylist/easylist/blob/master/package.json
 Regenerate with: npm run update:filters

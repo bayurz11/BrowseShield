@@ -1,0 +1,16 @@
+{
+  "name": "browseshield",
+  "version": "0.1.0",
+  "description": "BrowseShield is a Chrome Manifest V3 extension starter focused on local, user-controlled browsing protection.",
+  "scripts": {
+    "update:filters": "node scripts/update-filter-list.mjs",
+    "generate:icons": "python scripts/generate-icons.py",
+    "package:extension": "python scripts/package-extension.py",
+    "test": "node --test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "module",
+  "private": true
+}

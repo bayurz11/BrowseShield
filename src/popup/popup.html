@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BrowseShield</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="logo" aria-hidden="true"><svg><use href="../assets/heroicons.svg#shield-check"></use></svg></div>
+        <div class="brand"><h1>BrowseShield</h1><p>Kontrol sederhana untuk browsing</p></div>
+        <span class="status-badge"><i class="live-dot" aria-hidden="true"></i><span id="protection-state">Aktif</span></span>
+      </header>
+
+      <section class="site-card" aria-labelledby="site-heading">
+        <div class="site-card-top"><div class="eyebrow" id="site-heading">SITUS INI</div><span id="site-state" class="site-state">Memeriksa…</span></div>
+        <div id="site" class="site">Memuat…</div>
+        <p id="site-note" class="site-note">Pengecualian mematikan perlindungan BrowseShield di situs ini.</p>
+        <button id="allowlist" class="text-button">Jadikan situs pengecualian</button>
+      </section>
+
+      <label class="toggle-row master-row">
+        <span class="setting-copy"><svg><use href="../assets/heroicons.svg#shield-check"></use></svg><span><strong>BrowseShield aktif</strong><small>Matikan untuk menjeda semua perlindungan</small></span></span>
+        <input id="enabled" type="checkbox"><span class="switch" aria-hidden="true"></span>
+      </label>
+
+      <label class="toggle-row site-protection-row">
+        <span class="setting-copy"><svg><use href="../assets/heroicons.svg#no-symbol"></use></svg><span><strong>Blokir popup & tautan keluar</strong><small>Tahan tautan dan pengalihan ke situs lain</small></span></span>
+        <input id="redirect" type="checkbox"><span class="switch" aria-hidden="true"></span>
+      </label>
+
+      <section class="page-actions" aria-labelledby="actions-heading">
+        <div class="actions-intro"><strong id="actions-heading">Perbaiki halaman</strong><span>Cari bagian yang menutupi layar atau pilih sendiri.</span></div>
+        <div class="actions">
+          <button id="diagnose" class="primary"><svg><use href="../assets/heroicons.svg#magnifying-glass"></use></svg>Periksa halaman</button>
+          <button id="picker" class="secondary"><svg><use href="../assets/heroicons.svg#cursor-arrow-rays"></use></svg>Pilih bagian</button>
+          <button id="save-rules" class="save-button" hidden><svg><use href="../assets/heroicons.svg#shield-check"></use></svg>Ingat pilihan di situs ini</button>
+        </div>
+      </section>
+
+      <details class="advanced-settings">
+        <summary><svg aria-hidden="true"><use href="../assets/heroicons.svg#cog-6-tooth"></use></svg><span>Pengaturan lainnya</span><svg class="chevron" aria-hidden="true"><use href="../assets/heroicons.svg#chevron-down"></use></svg></summary>
+        <div class="advanced-content">
+          <label class="toggle-row">
+            <span class="setting-copy"><svg><use href="../assets/heroicons.svg#globe-alt"></use></svg><span><strong>Lindungi semua situs</strong><small>Meminta izin untuk bekerja di semua halaman web</small></span></span>
+            <input id="all-sites" type="checkbox"><span class="switch" aria-hidden="true"></span>
+          </label>
+          <label class="toggle-row">
+            <span class="setting-copy"><svg><use href="../assets/heroicons.svg#no-symbol"></use></svg><span><strong>Aktifkan daftar blokir</strong><small>Untuk daftar manual dan filter iklan</small></span></span>
+            <input id="network" type="checkbox"><span class="switch" aria-hidden="true"></span>
+          </label>
+          <label class="toggle-row">
+            <span class="setting-copy"><svg><use href="../assets/heroicons.svg#no-symbol"></use></svg><span><strong>Filter iklan dan pelacak</strong><small>EasyList, daftar filter komunitas</small></span></span>
+            <input id="filter-list" type="checkbox"><span class="switch" aria-hidden="true"></span>
+          </label>
+          <p id="network-hint" class="advanced-hint" role="status">Aktifkan daftar blokir untuk memakai filter iklan.</p>
+          <button id="manage-settings" class="advanced-link" type="button">Atur daftar blokir dan filter</button>
+        </div>
+      </details>
+
+      <p id="status" role="status" aria-live="polite"></p>
+      <footer><span class="privacy-icon" aria-hidden="true">●</span> Pengaturan tersimpan di perangkat ini
+        <button id="open-history" title="Riwayat sesi" aria-label="Buka riwayat sesi"><svg><use href="../assets/heroicons.svg#clock"></use></svg><span>Riwayat</span><b id="history-count">0</b></button>
+        <button id="open-settings" title="Buka pengaturan" aria-label="Buka pengaturan"><svg><use href="../assets/heroicons.svg#cog-6-tooth"></use></svg></button>
+      </footer>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

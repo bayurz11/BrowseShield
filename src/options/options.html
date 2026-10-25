@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pengaturan BrowseShield</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark" aria-hidden="true"><svg><use href="../assets/heroicons.svg#shield-check"></use></svg></div>
+    <div><strong>BrowseShield</strong><span>Pengaturan</span></div>
+  </header>
+  <main>
+    <section class="intro"><span class="eyebrow">PREFERENSI BROWSING</span><h1>Pengaturan BrowseShield</h1><p>Aktifkan perlindungan dasar, lalu tambah filter sesuai kebutuhan. Perubahan tersimpan otomatis.</p></section>
+    <nav class="section-nav" aria-label="Bagian pengaturan">
+      <a href="#protection">Perlindungan</a><a href="#domains">Daftar blokir</a><a href="#exceptions">Pengecualian</a><a href="#history">Riwayat</a>
+    </nav>
+    <section class="card" id="protection">
+      <div class="section-heading"><div><h2>Perlindungan</h2><p>Aktifkan hanya fitur yang Anda perlukan.</p></div><span class="section-icon" aria-hidden="true"><svg><use href="../assets/heroicons.svg#shield-check"></use></svg></span></div>
+      <label class="setting-row"><span><strong>Perlindungan BrowseShield</strong><small>Sakelar utama untuk menjeda atau menjalankan perlindungan</small></span><input id="enabled" type="checkbox" class="switch-input"><span class="switch" aria-hidden="true"></span></label>
+      <label class="setting-row"><span><strong>Cari penghalang halaman</strong><small>Temukan bagian yang menutupi halaman atau menghalangi klik</small></span><input id="overlay" type="checkbox" class="switch-input"><span class="switch" aria-hidden="true"></span></label>
+      <label class="setting-row"><span><strong>Blokir daftar situs</strong><small>Gunakan daftar blokir manual atau filter iklan</small></span><input id="network" type="checkbox" class="switch-input"><span class="switch" aria-hidden="true"></span></label>
+      <label class="setting-row dependent-row"><span><strong>Blokir iklan dan pelacak</strong><small>EasyList · beberapa bagian situs bisa ikut terblokir</small></span><input id="filter-list" type="checkbox" class="switch-input"><span class="switch" aria-hidden="true"></span></label>
+      <p id="filter-hint" class="setting-hint" role="status">Aktifkan pemblokiran jaringan untuk menggunakan EasyList.</p>
+      <div class="filter-update-row"><p id="easylist-status" role="status">EasyList memakai aturan bawaan.</p><button id="update-easylist" type="button" class="quiet-button">Perbarui EasyList</button></div>
+      <p class="field-hint">Pembaruan meminta izin ke easylist.to dan berjalan otomatis tiap 7 hari setelah izin diberikan. Riwayat browsing tidak dikirim.</p>
+    </section>
+    <section class="card" id="domains">
+      <div class="section-heading"><div><h2>Daftar blokir manual</h2><p>Tambahkan alamat situs yang ingin diblokir. Pastikan situs itu tidak dipakai untuk fungsi penting.</p></div><span class="section-icon" aria-hidden="true"><svg><use href="../assets/heroicons.svg#no-symbol"></use></svg></span></div>
+      <form id="domain-form"><label class="sr-only" for="domain-input">Alamat situs</label><input id="domain-input" type="text" placeholder="misalnya iklan.example" autocomplete="off" spellcheck="false"><button type="submit"><svg><use href="../assets/heroicons.svg#plus"></use></svg>Tambah situs</button></form>
+      <p class="field-hint">Masukkan nama situs saja, tanpa https:// atau alamat setelah garis miring.</p>
+      <ul id="blocked-domains" class="item-list"></ul>
+    </section>
+    <section class="card" id="exceptions">
+      <div class="section-heading"><div><h2>Pengecualian situs</h2><p>BrowseShield tidak akan memblokir atau mengubah halaman situs berikut.</p></div><span class="section-icon" aria-hidden="true"><svg><use href="../assets/heroicons.svg#globe-alt"></use></svg></span></div>
+      <ul id="sites" class="item-list"></ul>
+    </section>
+    <section class="card" id="history">
+      <div class="section-heading"><div><h2>Riwayat sementara</h2><p>Melihat apa yang ditahan BrowseShield dan tujuannya. Riwayat dihapus saat browser ditutup.</p></div><span class="section-icon" aria-hidden="true"><svg><use href="../assets/heroicons.svg#clock"></use></svg></span></div>
+      <p id="history-capability" class="setting-hint" role="status"></p>
+      <div class="history-toolbar"><span id="history-summary">Memuat riwayat…</span><button id="clear-history" type="button" class="quiet-button">Hapus riwayat</button></div>
+      <ul id="history-list" class="history-list"></ul>
+    </section>
+    <p id="status" role="status" aria-live="polite"></p>
+    <footer>BrowseShield <span>•</span> Pengaturan lokal dan privat</footer>
+  </main>
+  <script type="module" src="options.js"></script>
+</body>
+</html>
